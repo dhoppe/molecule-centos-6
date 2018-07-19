@@ -5,7 +5,7 @@ LABEL maintainer="Dennis Hoppe"
 ENV container docker
 
 RUN yum upgrade -y \
-    && yum -y install initscripts \
+    && yum -y install initscripts iproute \
     && yum clean all
 
 VOLUME [ "/sys/fs/cgroup" ]
